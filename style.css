@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #39a26a;
+  color: white; }
+  header #nav-menu-toggle {
+    display: none; }
+  header nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+    grid-template-areas: "logo . menu-items";
+    column-gap: 0.5em;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 0.75em;
+    max-width: 1632px;
+    min-height: 3em; }
+    header nav h1 {
+      grid-area: logo;
+      margin: 0;
+      font-size: 1.5em; }
+    header nav ul {
+      grid-area: menu-items;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+      margin: 0;
+      padding: 0; }
+      header nav ul li a {
+        color: inherit;
+        text-decoration: none; }
+    header nav label[for="nav-menu-toggle"] {
+      grid-area: hamburger;
+      display: none;
+      height: 3em; }
+      header nav label[for="nav-menu-toggle"] .nav-hamburger {
+        cursor: pointer;
+        transition: transform 400ms;
+        user-select: none;
+        height: 3em; }
+        header nav label[for="nav-menu-toggle"] .nav-hamburger .nav-hamburger__line {
+          fill: none;
+          transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+          stroke: currentColor;
+          stroke-width: 5.5;
+          stroke-linecap: round; }
+          header nav label[for="nav-menu-toggle"] .nav-hamburger .nav-hamburger__line--top {
+            stroke-dasharray: 40 139; }
+          header nav label[for="nav-menu-toggle"] .nav-hamburger .nav-hamburger__line--bottom {
+            stroke-dasharray: 40 180; }
+  @media only screen and (max-width: 1023px) {
+    header nav {
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto;
+      grid-template-areas: "logo . hamburger"; }
+      header nav label[for="nav-menu-toggle"] {
+        display: block; }
+      header nav ul {
+        display: none; }
+    header #nav-menu-toggle:checked ~ nav {
+      grid-template-rows: auto auto;
+      grid-template-areas: "logo . hamburger" "menu-items menu-items menu-items"; }
+      header #nav-menu-toggle:checked ~ nav ul {
+        display: grid;
+        gap: 0.25em; }
+        header #nav-menu-toggle:checked ~ nav ul li a {
+          font-size: 1.25em;
+          padding: 0.5em 0;
+          display: block; }
+      header #nav-menu-toggle:checked ~ nav label[for="nav-menu-toggle"] .nav-hamburger {
+        transform: rotate(45deg); }
+        header #nav-menu-toggle:checked ~ nav label[for="nav-menu-toggle"] .nav-hamburger .nav-hamburger__line--top {
+          stroke-dashoffset: -98px; }
+        header #nav-menu-toggle:checked ~ nav label[for="nav-menu-toggle"] .nav-hamburger .nav-hamburger__line--bottom {
+          stroke-dashoffset: -138px; } }
+
+main {
+  margin: 0 auto;
+  padding: 0.75em;
+  max-width: 1632px; }
+
+/*# sourceMappingURL=style.css.map */

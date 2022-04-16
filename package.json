@@ -1,0 +1,11 @@
+{
+  "name": "responsive-navigation",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "http-server"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  }
+}
