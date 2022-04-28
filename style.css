@@ -36,17 +36,14 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
-
 header nav ul li a {
   display: block;
   color: inherit;
   text-decoration: none;
 }
-
 header nav #nav-menu-toggle {
   display: none;
 }
-
 header nav label[for=nav-menu-toggle] {
   display: none;
   height: 3em;
@@ -69,16 +66,13 @@ header nav label[for=nav-menu-toggle] .nav-hamburger .nav-hamburger__line--top {
 header nav label[for=nav-menu-toggle] .nav-hamburger .nav-hamburger__line--bottom {
   stroke-dasharray: 40 180;
 }
-
 @media only screen and (max-width: 1023px) {
   header nav label[for=nav-menu-toggle] {
     display: flex;
   }
-
   header nav ul {
     display: none;
   }
-
   header #nav-menu-toggle:checked ~ ul {
     position: absolute;
     inset: 100% 0 auto 0;
@@ -89,7 +83,6 @@ header nav label[for=nav-menu-toggle] .nav-hamburger .nav-hamburger__line--botto
     transform-origin: top;
     animation: mobile-nav-menu-animation 0.25s cubic-bezier(0.1, 1.45, 0.35, 1);
   }
-
   @keyframes mobile-nav-menu-animation {
     0% {
       transform: scaleY(0.6);
@@ -102,15 +95,12 @@ header nav label[for=nav-menu-toggle] .nav-hamburger .nav-hamburger__line--botto
     font-size: 1.25em;
     padding: 0.5em 0;
   }
-
   header #nav-menu-toggle:checked ~ label[for=nav-menu-toggle] .nav-hamburger {
     transform: rotate(45deg);
   }
-
   header #nav-menu-toggle:checked ~ label[for=nav-menu-toggle] .nav-hamburger .nav-hamburger__line--top {
     stroke-dashoffset: -98px;
   }
-
   header #nav-menu-toggle:checked ~ label[for=nav-menu-toggle] .nav-hamburger .nav-hamburger__line--bottom {
     stroke-dashoffset: -138px;
   }
