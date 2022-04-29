@@ -53,9 +53,9 @@ header {
 
     label[for="nav-menu-toggle"] {
       display: none;
-      height: 3em;
 
       .nav-hamburger {
+        height: 3em;
         cursor: pointer;
         transition: transform 400ms;
         user-select: none;
